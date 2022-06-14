@@ -1,12 +1,13 @@
+### signup
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email":"skdjp@wp1.com",
-    "password": "password"
+    "email":"email@test1.com",
+    "password": "12345"
 }
 
-###signin
+### signin as an existing user
 POST http://localhost:3000/auth/signin
 content-type: application/json
 
@@ -17,8 +18,14 @@ content-type: application/json
 ###Get one user
 GET http://localhost:3000/auth/3
 
+###signout 
+POST http://localhost:3000/auth/signout
+
 ###Get all users by email
 GET http://localhost:3000/auth?email=skdjp@wp.com
+
+###Get signed user
+GET http://localhost:3000/auth/whoami
 
 ###Update a user
 PATCH http://localhost:3000/auth/2
