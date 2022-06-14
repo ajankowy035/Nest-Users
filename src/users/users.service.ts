@@ -36,7 +36,7 @@ export class UsersService {
 
       this.repo.save(updatedUser);
     } catch (error) {
-      throw new Error(error);
+      throw error;
     }
   }
 
@@ -46,7 +46,7 @@ export class UsersService {
 
       this.repo.remove(user);
     } catch (error) {
-      throw new Error(error);
+      throw error;
     }
   }
 }

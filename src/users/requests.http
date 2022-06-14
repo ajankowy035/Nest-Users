@@ -2,12 +2,12 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email":"skdjp@wp.com",
+    "email":"skdjp@wp1.com",
     "password": "password"
 }
 
 ###Get one user
-GET http://localhost:3000/auth/2
+GET http://localhost:3000/auth/3
 
 ###Get all users by email
 GET http://localhost:3000/auth?email=skdjp@wp.com

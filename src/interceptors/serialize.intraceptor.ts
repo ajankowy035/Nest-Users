@@ -21,7 +21,6 @@ export class SerializeInterceptor implements NestInterceptor {
     handler: CallHandler<any>,
   ): Observable<any> {
     //run before the request
-    console.log('before handler', context);
 
     return handler.handle().pipe(
       //transform db entity into provided dto
