@@ -34,7 +34,7 @@ export class UsersService {
       }
       const updatedUser = { ...curr, ...attrs };
 
-      this.repo.save(updatedUser);
+      return this.repo.save(updatedUser);
     } catch (error) {
       throw error;
     }

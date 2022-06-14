@@ -6,6 +6,14 @@ content-type: application/json
     "password": "password"
 }
 
+###signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email":"skdjp@wp1.com",
+    "password": "password"
+}
 ###Get one user
 GET http://localhost:3000/auth/3
 
