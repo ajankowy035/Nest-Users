@@ -1,0 +1,21 @@
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email":"skdjp@wp.com",
+    "password": "password"
+}
+
+###Get one user
+GET http://localhost:3000/auth/2
+
+###Get all users by email
+GET http://localhost:3000/auth?email=skdjp@wp.com
+
+###Update a user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "b@c.pl"
+}
