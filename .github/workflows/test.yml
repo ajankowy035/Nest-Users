@@ -18,6 +18,7 @@ jobs:
         with:
           envkey_DEBUG: false
           envkey_NODE_ENV: 'test'
+          envkey_DB_NAME: 'test.sqlite'
           directory: './'
           file_name: .env.test
           fail_on_empty: false
