@@ -12,8 +12,8 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-    "email":"skdjp@wp1.com",
-    "password": "password"
+    "email":"email@test1.com",
+    "password": "12345"
 }
 ###Get one user
 GET http://localhost:3000/auth/3
