@@ -1,0 +1,12 @@
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+    "make": "hyundai", 
+    "model": "kona", 
+    "year": 2016, 
+    "milage": 2230, 
+    "lng": 1, 
+    "lat": 22, 
+    "price": 17300
+}

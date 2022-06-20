@@ -11,7 +11,7 @@ describe('AuthService', () => {
     fakeUsersService = {
       find: () => Promise.resolve([]),
       create: (email: string, password: string) =>
-        Promise.resolve({ id: 1, email, password }),
+        Promise.resolve({ id: 1, email, password, reports: [] }),
     };
 
     //temprorary DI test container
@@ -41,7 +41,9 @@ describe('AuthService', () => {
 
   it('throws an error if user signs up with email that is in use', async () => {
     fakeUsersService.find = () =>
-      Promise.resolve([{ id: 1, email: 'abc@def.com', password: '12345' }]);
+      Promise.resolve([
+        { id: 1, email: 'abc@def.com', password: '12345', reports: [] },
+      ]);
     try {
       await service.signup('abc@def.com', '12345');
     } catch (error) {
@@ -51,7 +53,9 @@ describe('AuthService', () => {
 
   it('throws an error if user signs in with incorrect password', async () => {
     fakeUsersService.find = () =>
-      Promise.resolve([{ id: 1, email: 'abc@def.com', password: '12345' }]);
+      Promise.resolve([
+        { id: 1, email: 'abc@def.com', password: '12345', reports: [] },
+      ]);
     try {
       await service.signin('abc@def.com', 'password');
     } catch (error) {
@@ -72,7 +76,12 @@ describe('AuthService', () => {
 
     fakeUsersService.find = () =>
       Promise.resolve([
-        { id: 1, email: 'abc@def.com', password: newUser.password },
+        {
+          id: 1,
+          email: 'abc@def.com',
+          password: newUser.password,
+          reports: [],
+        },
       ]);
 
     const user = await service.signin('abc@def.com', '12345');
